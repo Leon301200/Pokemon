@@ -14,7 +14,7 @@ class Map:
         self.map_layer = None
         self.group = None
 
-        self.switch_map("map0")
+        self.switch_map("map_0")
         self.player: Player | None = None
 
     def switch_map(self, map: str):
