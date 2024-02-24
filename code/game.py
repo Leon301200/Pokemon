@@ -3,6 +3,8 @@ from screen import Screen
 from map import Map
 from entity import Entity
 from keylistener import KeyListener
+from player import Player
+
 
 class Game:
 
@@ -11,8 +13,8 @@ class Game:
         self.screen = Screen()
         self.map = Map(self.screen)
         self.keylistener = KeyListener()
-        self.entity = Entity(self.keylistener)
-        self.map.add_player(self.entity)
+        self.player = Player(self.keylistener, self.screen, 0, 0)
+        self.map.add_player(self.player)
 
 
     def run(self):
